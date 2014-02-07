@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Vendiwebapp::Application.config.secret_key_base = 'd405ddf2785c4e95ae54504bb8e69407b7ee51d6db11551aefcefa21005bd0e18d6a817b75f446b9dc683b12375f3d8cf399824940adfce26acec6f66914a77a'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleApp::Application.config.secret_key_base = secure_token
