@@ -41,9 +41,10 @@ gem 'bootstrap-sass'
 
 
 
-
-
-
+group :production do
+	#Sets assets in production
+	gem 'rails_12factor'
+end
 
 
 # Use ActiveModel has_secure_password
