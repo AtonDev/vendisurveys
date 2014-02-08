@@ -1,6 +1,8 @@
 Vendiwebapp::Application.routes.draw do
-  get "survey_pages/owners"
-  get "survey_pages/resellers"
+  #get "survey_pages/owners" 
+  get 'survey-s' => 'survey_pages#resellers'
+  get 'survey-o' => 'survey_pages#owners'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -4,4 +4,6 @@ class SurveyPagesController < ApplicationController
 
   def resellers
   end
+
+
 end
