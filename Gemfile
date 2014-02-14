@@ -35,10 +35,12 @@ end
 # Use Haml instead of erb
 gem 'haml-rails', '~> 0.5.3'
 
-#Use bootstrap
-gem 'bootstrap-sass'
 
 
+
+group :development do
+	
+end
 
 
 group :production do
@@ -46,6 +48,11 @@ group :production do
 	gem 'rails_12factor'
 end
 
+#Use bootstrap
+gem 'bootstrap-sass'
+# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+# gem "therubyracer"
+# gem "less-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

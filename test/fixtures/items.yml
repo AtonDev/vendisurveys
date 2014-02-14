@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  title: samsung tv
+  condition: very good
+  description: very big tv I have at my place
+
+two:
+  price: 
+  title: shoes
+  condition: slightly used
+  description: I wore them just a couple of times

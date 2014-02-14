@@ -1,4 +1,7 @@
 Vendiwebapp::Application.routes.draw do
+
+  get "items/index"
+  get "welcome/index"
   #get "survey_pages/owners" 
   get 'survey-s' => 'survey_pages#resellers'
   get 'survey-o' => 'survey_pages#owners'
@@ -7,7 +10,17 @@ Vendiwebapp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
+
+  match '/items' => 'items#index', :as => :items, via: [:get]
+
+
+  match "/profile" => 'user#show', :as => :profile, via: [:get]
+
+
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

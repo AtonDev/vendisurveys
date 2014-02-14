@@ -1,0 +1,31 @@
+=provide(:title, 'Welcome')
+.container-fluid
+	.row
+		.col-lg-8.col-lg-offset-2
+			%h1#title Vendi
+			%hr.h-line/
+			.about-app
+				%p 
+			%hr.h-line/
+			%form.form-horizontal{role: "form"}
+				.form-group
+					%label.col-sm-4.control-label{for: "inputEmail3"} Sign up to become a beta user:
+					.col-sm-6
+						%input#inputEmail3.form-control{placeholder: "Email", type: "email"}/
+					.col-sm-2
+						%button.btn-default.btn Sign Up
+			%hr.h-line/
+	.row
+	.about-us
+		.col-lg-4.col-lg-offset-2
+			.aboutus
+				%img.img-circle{alt: "Arturo", src:image_path("arturo.png")}
+				%h1 Jason Clark
+				%h2 Co-Founder
+				%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, deleniti, reiciendis sequi in porro corporis harum autem repellat tempora culpa consequatur distinctio voluptatibus animi ab omnis voluptatum ducimus ipsa sapiente!
+		.col-lg-4
+			.aboutus
+				%img.img-circle{alt: "Arturo", src:image_path("arturo.png")}
+				%h1 Arturo Pacifico Griffini
+				%h2 Co-Founder
+				%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, deleniti, reiciendis sequi in porro corporis harum autem repellat tempora culpa consequatur distinctio voluptatibus animi ab omnis voluptatum ducimus ipsa sapiente!
