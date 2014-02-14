@@ -2,9 +2,6 @@ Vendiwebapp::Application.routes.draw do
 
   get "items/index"
   get "welcome/index"
-  #get "survey_pages/owners" 
-  get 'survey-s' => 'survey_pages#resellers'
-  get 'survey-o' => 'survey_pages#owners'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,13 +9,16 @@ Vendiwebapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  match '/survey-s' => 'survey_pages#resellers', :as => :survey_s, via: [:get]
+  match '/survey-o' => 'survey_pages#owners', :as => :survey_o, via: [:get]
+
   match '/items' => 'items#index', :as => :items, via: [:get]
 
 
   match "/profile" => 'user#show', :as => :profile, via: [:get]
 
 
-
+  match '/about' => 'welcome#about_us', :as => :about_us, via: [:get]
 
 
 

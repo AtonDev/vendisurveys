@@ -10,11 +10,23 @@
 	margin: 0.7em;
 }
 
+.call > h2 {
+	font-size: 2em; 
+	text-align: center;
+	color: #015965;
+	font-family: cursive;
+	margin: 0.7em;
+}
+
+.call > p {
+	margin-bottom: 2em;
+}
+
 .h-line {
 
 }
 
-.about-app > p {
+p {
 	font-size: 1.2em;
 }
 
@@ -44,4 +56,19 @@
 .aboutus > p {
 	text-align: left;
 	padding-left: 1em;
+}
+
+.call > .col-sm-6 {
+	padding-left: 0px;
+}
+
+.left-border {
+	border-style: solid;
+	border: 1;
+	border-left: thin;
+}
+
+.btn-primary {
+	background-color: #028799;
+	margin: 7px;
 }
